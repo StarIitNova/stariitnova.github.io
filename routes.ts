@@ -1,19 +1,19 @@
 export const routes = [
     {
         template: "source/templates/index.ejs",
-        output: "public/index.html"
+        output: "docs/index.html"
     },
     {
         template: "source/templates/404.ejs",
-        output: "public/404.html"
+        output: "docs/404.html"
     }/*,
     {
         template: "source/templates/about.ejs",
-        output: "public/about.html"
+        output: "docs/about.html"
     },
     {
         template: "source/templates/projects.ejs",
-        output: "public/projects.html"
+        output: "docs/projects.html"
     }*/
 ];
 

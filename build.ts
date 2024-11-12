@@ -11,8 +11,8 @@ async function renderRoute(template: string, output: string, data: Record<string
 async function buildSass() {
     const sassData = await Deno.readTextFile(`${Deno.cwd()}/source/styles/index.scss`);
     const css = sass(sassData, { load_paths: [`${Deno.cwd()}/source/styles`] }).to_string();
-    await Deno.writeTextFile(`${Deno.cwd()}/public/index.css`, css);
-    console.log(`Wrote /public/index.css`)
+    await Deno.writeTextFile(`${Deno.cwd()}/docs/index.css`, css);
+    console.log(`Wrote docs/index.css`)
 }
 
 export async function build() {

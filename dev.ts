@@ -3,12 +3,12 @@ import { build } from "./build.ts"
 async function serveFiles(req: Request): Promise<Response> {
     try {
         const url = new URL(req.url);
-        const file = `./public/${url.pathname === "/" ? "/index.html" : url.pathname}`;
+        const file = `./docs/${url.pathname === "/" ? "/index.html" : url.pathname}`;
         const content = await Deno.readFile(file);
         const contentType = getContentType(file);
         return new Response(content, { status: 200, headers: { "content-type": contentType } });
     } catch {
-        const f404 = await Deno.readFile("./public/404.html");
+        const f404 = await Deno.readFile("./docs/404.html");
         return new Response(f404, { status: 404 });
     }
 
