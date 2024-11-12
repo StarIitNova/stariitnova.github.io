@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <title>StarlitNova</title>
+
+        <link rel="stylesheet" href="./index.css">
+
+        <script defer src="./index.js"></script>
+    </head>
+    <body>
+        <%- await include("source/templates/partials/navbar.ejs") %>
+
+        <div class="content home">
+            <div id="upper-row-anim">
+                <canvas id="landing-bg"></canvas>
+                <h1 id="username">StarlitNova</h1>
+                <p id="basic-description">Enthusiastic C++ developer with a focus of working on Sugar Music, making games, and programming languages, along with past experience of participating in events including Lockheed Martin competitions, Advent of Code, and game jams.</p>
+            </div>
+        </div>
+
+        <%- await include("source/templates/partials/footer.ejs") %>
+    </body>
+</html>
